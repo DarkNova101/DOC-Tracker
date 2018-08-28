@@ -60,7 +60,7 @@ if(isset($_POST['login'])){
             $_SESSION['logged_in'] = time();
 
             //Redirect to our protected page, which we called home.php
-            header('Location: home.php');
+            header('Location: index.php');
             exit;
 
         } else{
@@ -79,13 +79,50 @@ if(isset($_POST['login'])){
         <title>Login</title>
     </head>
     <body>
-        <h1>Login</h1>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+           <div class="container">
+             <a class="navbar-brand" href="#">Defenders Of Christ</a>
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto">
+                 <li class="nav-item active">
+                   <a class="nav-link" href="home.php">Home
+                     <span class="sr-only">(current)</span>
+                   </a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="#">About</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="#">Contact</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="#">Account</a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="logout.php">Logout</a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+         </nav>
+         <table align="center">
+           <thead>
+             <tr><th><h2>Login</h2></th></tr>
+           </thead>
+           <tbody>
+             <tr>
         <form action="login.php" method="post">
-            <label for="username">Username/Email</label>
-            <input type="text" id="username" name="username"><br>
-            <label for="password">Password</label>
-            <input type="text" id="password" name="password"><br>
-            <input type="submit" name="login" value="Login">
+            <td><label for="username">Username/Email</label>
+            <input type="text" id="username" name="username"></td>
+          </tr><tr>
+            <td><label for="password">Password</label>
+            <input type="text" id="password" name="password"></td>
+            </tr><tr>
+            <td><input type="submit" name="login" value="Login"></td></tr>
         </form>
+      </tbody>
     </body>
 </html>
