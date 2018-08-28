@@ -51,13 +51,14 @@ if(isset($_POST['login'])){
 
         //Compare the passwords.
         $validPassword = password_verify($passwordAttempt, $user['password']);
-
         //If $validPassword is TRUE, the login has been successful.
         if($validPassword){
-
-            //Provide the user with a login session.
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['logged_in'] = time();
+            $userid = $user['id'];
+
+            $username = $pdo->query("SELECT Name from users WHERE id='$userid'")->fetch();
+            $_SESSION['username'] = $username;
 
             //Redirect to our protected page, which we called home.php
             header('Location: index.php');
@@ -102,7 +103,7 @@ if(isset($_POST['login'])){
                    <a class="nav-link" href="#">Account</a>
                  </li>
                  <li class="nav-item">
-                   <a class="nav-link" href="logout.php">Logout</a>
+                   <a class="nav-link" href="#">Login</a>
                  </li>
                </ul>
              </div>
@@ -123,6 +124,12 @@ if(isset($_POST['login'])){
             </tr><tr>
             <td><input type="submit" name="login" value="Login"></td></tr>
         </form>
+        <tr>
+          <td>
+            <h6>Need an account? Make one <a href="register.php">here</a>!
+            </td>
+          </tr>
       </tbody>
+      <center>
     </body>
 </html>

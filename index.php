@@ -1,9 +1,18 @@
-<?php
-include("connect.php");
-?>
+
 <html lang="en">
 <head>
   <title>DOC Tracker</title>
+  <!--CSS Sheets-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/main.css">
+  <?php
+  include("connect.php");
+  /**
+   * Start the session.
+   */
+  session_start();
+
+  ?>
 </head>
 <body>
   <!--Nav Bar-->
@@ -20,18 +29,39 @@ include("connect.php");
                  <span class="sr-only">(current)</span>
                </a>
              </li>
-             <li class="nav-item">
-               <a class="nav-link" href="#">About</a>
+             <li>
+               <span class="navbar-text">|</span>
              </li>
              <li class="nav-item">
                <a class="nav-link" href="#">About</a>
+             </li>
+             <li>
+               <span class="navbar-text">|</span>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">Contact</a>
+             </li>
+             <li>
+               <span class="navbar-text">|</span>
              </li>
              <li class="nav-item">
                <a class="nav-link" href="#">Account</a>
              </li>
-             <li class="nav-item">
-               <a class="nav-link" href="logout.php">Logout</a>
+             <li>
+               <span class="navbar-text">|&nbsp;</span>
              </li>
+               <?php
+               $str = $_SESSION['username'];
+
+               if ($_SESSION['logged_in']==true) {
+                   echo " <span class='navbar-text welcometext'> Welcome,<em> ".$str[0]."</em>!</span>";
+                   //echo "<a href='logout.php'><span>Logout</span></a></li>";
+                   echo "<li class='nav-item'><a class='nav-link' href='logout.php'>Logout</a></li>";
+               } elseif ($_SESSION['logged_in ']==false) {
+                   echo "<a href='register.php'><span>Login/Register</span></a></li>";
+
+               }
+     ?>
            </ul>
          </div>
        </div>
@@ -39,18 +69,10 @@ include("connect.php");
 <!--End Nav Bar-->
 <?php
 
-//home.php
-
-/**
- * Start the session.
- */
-session_start();
-
-
 /**
  * Check if the user is logged in.
  */
-if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])) {
     //User not logged in. Redirect them back to the login.php page.
     header('Location: login.php');
     exit;

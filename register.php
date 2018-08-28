@@ -25,7 +25,7 @@ if(isset($_POST['register'])){
     //Retrieve the field values from our registration form.
     $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
     $pass = !empty($_POST['password']) ? trim($_POST['password']) : null;
-    $email = !empty($_POST['email']) ? trim($_POST['email']) : null
+    $email = !empty($_POST['email']) ? trim($_POST['email']) : null;
     $name = !empty($_POST['name']) ? trim($_POST['name']) : null;
 
     //TO ADD: Error checking (username characters, password length, etc).
