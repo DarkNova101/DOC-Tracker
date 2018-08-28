@@ -8,4 +8,4 @@ Example
     [1]  [test@test.com] [Test E Test]  [test]     [ENCRYPTED/HASHED]  [TestETest.json]or[Test E Test.json]
 
 
-2 Bookmarks in Google Chrome about this. Make a file per person that can be edited whenever with JSON stuff and looked up and printed with PHP. 
+2 Bookmarks in Google Chrome about this. Make a file per person that can be edited whenever with JSON stuff and looked up and printed with PHP.
