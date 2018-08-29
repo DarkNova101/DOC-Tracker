@@ -9,3 +9,16 @@ Example
 
 
 2 Bookmarks in Google Chrome about this. Make a file per person that can be edited whenever with JSON stuff and looked up and printed with PHP.
+
+
+- Start Work on Set Personal Information Page (setdetails.php) example found here (https://securesite.ministrytracker.com/edit_student.cgi?STID=2028892)
+- Work on index page more, similar to (https://securesite.ministrytracker.com/og_profile.cgi)?
+
+- Add Events Calendar
+- Work on About & Contact Page
+
+
+Priority:
+ 1) Work on Set Personal Information
+ 2) Setup JSON Storage
+ 3) Index Page to show minimal info on Person (https://gyazo.com/e59d9e499830fbef1447a132303f36d0)

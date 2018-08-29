@@ -45,27 +45,38 @@
                <span class="navbar-text">|</span>
              </li>
              <li class="nav-item">
-               <a class="nav-link" href="#">Account</a>
+               <a class="nav-link" href="account">Account</a>
              </li>
              <li>
                <span class="navbar-text">|&nbsp;</span>
              </li>
                <?php
+              // Make the SESSION username variable a different variable
                $str = $_SESSION['username'];
-
+               $isadmin = $_SESSION['isadmin'];
+              // Check if user is loggged in to display namne
                if ($_SESSION['logged_in']==true) {
+                 // Display Name                                                $str[0] (Picks the First Name in the Array ONLY)
                    echo " <span class='navbar-text welcometext'> Welcome,<em> ".$str[0]."</em>!</span>";
-                   //echo "<a href='logout.php'><span>Logout</span></a></li>";
                    echo "<li class='nav-item'><a class='nav-link' href='logout.php'>Logout</a></li>";
-               } elseif ($_SESSION['logged_in ']==false) {
-                   echo "<a href='register.php'><span>Login/Register</span></a></li>";
-
+               } elseif (!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])) {
+                   //User not logged in. Redirect them back to the login.php page.
+                   header('Location: login.php');
+                   exit();
+               }
+               if($isadmin <= 1) {
+                 echo "<li><span class='navbar-text'>|</span></li>";
+                 echo "<li class='nav-item'><a class='nav-link' href='admin'><em><strong>Admin Panel</strong></em></a></li>";
+               }
+               else {
+                 echo "";
                }
      ?>
            </ul>
          </div>
        </div>
      </nav>
+
 <!--End Nav Bar-->
 <?php
 
@@ -75,7 +86,7 @@
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])) {
     //User not logged in. Redirect them back to the login.php page.
     header('Location: login.php');
-    exit;
+    exit();
 }
 
 

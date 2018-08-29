@@ -5,6 +5,13 @@
   margin-left: 45px;
   margin-top: 20px;
 }
+.alert-danger {
+  border-radius: 15px;
+  font-size: 15px;
+  margin-right: 700px;
+  margin-left: 700px;
+  margin-top: 20px;
+}
 .welcometext {
   color: white;
 }
