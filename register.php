@@ -76,6 +76,10 @@ if(isset($_POST['register'])){
     if($result){
         //What you do here is up to you!
         echo 'Thank you for registering with our website.';
+        $jsontest = json_encode($_POST);
+        echo $jsontest;
+        echo "<br>";
+        print_r ($_POST);
     }
 
 }

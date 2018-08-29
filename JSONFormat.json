@@ -1,0 +1,50 @@
+{
+  "general" : {
+    "firstName" : "Nolan",
+    "lastName" : "Hall",
+    "nickname" : "",
+    "dob" : "1/1/1111",
+    "gender" : "Male",
+    "grade" : "Junior",
+    "school" : "SPX"
+  },
+  "contactinfo" : {
+    "homephone" : "(111)111-1111",
+    "cellphone" : "(111)111-1111",
+    "emailaddress" : "nehall.neh@gmail.com",
+    "streetaddress" :  "3665 Roads End Acres Rd",
+    "aptnumber" : "",
+    "city" : "Imperial",
+    "state" : "MO",
+    "zipcode" : "63052"
+  },
+  "contacts" : {
+    "mother" : {
+      "name" : "Karin Hall",
+      "mcellnum" : "(111)111-1111",
+      "memailaddreess" : "(111)111-1111"
+    },
+    "father" : {
+      "name" : "Eric Hall",
+      "fcellnum" : "(111)111-1111",
+      "femailaddreess" : "(111)111-1111"
+    },
+    "emergency1" : {
+      "name" : "Judy Ackermann",
+      "e1cellnum" : "(111)111-1111",
+    },
+    "emergency2" : {
+      "name" : "Gail Bowler",
+      "e2cellnum" : "(111)111-1111",
+    },
+  },
+  "medicalinfo" : {
+    "medicalconditions" : "N/A",
+    "alergies" : "N/A",
+    "medications" : "N/A",
+    "insurancecompany" : "Anthem",
+    "policynumber" : "q232re343",
+    "doctor" : "temp",
+    "docphonenumber" : "(111)111-1111"
+  }
+}
