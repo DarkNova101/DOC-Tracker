@@ -13,6 +13,14 @@ ini_set('display_errors', 0);
  * This info should be available from within your hosting panel.
  */
 
+
+/*
+ * Set Admins here
+ * Array would look something like "array("1","2","3", ETC)"
+ * The numbers represent the USER ID's in the database
+ */
+ $admins = array("1");
+
 //Our MySQL user account.
 define('MYSQL_USER', 'nolanhal_tracker');
 

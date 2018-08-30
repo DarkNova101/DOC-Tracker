@@ -52,8 +52,8 @@
              </li>
                <?php
               // Make the SESSION username variable a different variable
+
                $str = $_SESSION['username'];
-               $isadmin = $_SESSION['isadmin'];
               // Check if user is loggged in to display namne
                if ($_SESSION['logged_in']==true) {
                  // Display Name                                                $str[0] (Picks the First Name in the Array ONLY)
@@ -64,9 +64,11 @@
                    header('Location: login.php');
                    exit();
                }
-               if($isadmin <= 1) {
+
+               if (in_array($_SESSION['user_id'], $admins)) {
                  echo "<li><span class='navbar-text'>|</span></li>";
                  echo "<li class='nav-item'><a class='nav-link' href='admin'><em><strong>Admin Panel</strong></em></a></li>";
+
                }
                else {
                  echo "";

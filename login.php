@@ -49,7 +49,7 @@
             <input type="text" id="username" name="username"></td>
           </tr><tr>
             <td><label for="password">Password</label>
-            <input type="password" id="password" name="password"></td>
+            <input type="text" id="password" name="password"></td>
             </tr><tr>
             <td><input type="submit" name="login" value="Login"></td></tr>
         </form>
@@ -126,8 +126,6 @@ if(isset($_POST['login'])){
             $username = $pdo->query("SELECT Name from users WHERE id='$userid'")->fetch();
             $_SESSION['username'] = $username;
 
-            $isadmin = $pdo->query("SELECT isadmin from users WHERE id='$userid'")->fetch();
-            $_SESSION['isadmin'] = $isadmin;
             //Redirect to our protected page, which we called home.php
             header('Location: index.php');
             exit;
