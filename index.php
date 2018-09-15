@@ -67,7 +67,7 @@
 
                if (in_array($_SESSION['user_id'], $admins)) {
                  echo "<li><span class='navbar-text'>|</span></li>";
-                 echo "<li class='nav-item'><a class='nav-link' href='admin'><em><strong>Admin Panel</strong></em></a></li>";
+                 echo "<li class='nav-item'><a class='nav-link' href='admin.php'><em><strong>Admin Panel</strong></em></a></li>";
 
                }
                else {
@@ -97,6 +97,28 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])) {
  */
  ?>
  <div class="alert alert-info" role="alert"><center>You are currently logged in!</center></div>
+
+ <div class="container">
+ 	<div class="row">
+ 		<div class="col-sm-6 col-sm-offset-1">
+ 			<div class="panel">
+ 				<div class="panel-heading text-center">
+ 					<div class="panel-title" style="font-size: 24px;">
+ 						<i class="fa fa-user"></i> Nolan Hall
+ 						<i class="fa fa-pencil-square-o pull-right" title="Edit Profile" onclick="window.location='edit_student.cgi?STID=2028892';" data-toggle="tooltip" data-placement="top" ></i>
+ 					</div>
+ 				</div>
+ 				<div class="panel-body">
+ 					<div class="row">
+    <div class="col-sm-6">
+    	<ul class="list-unstyled" style="line-height: 2.0em;">
+       <li><i class="fa fa-mobile fa-lg fa-fw" aria-hidden="true" data-toggle="tooltip" title="Cell Phone" data-placement="left"></i> 3146981517&nbsp;
+       <li> <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true" data-toggle="tooltip" title="Home Phone" data-placement="left"></i> 6359484609</li>
+ 	      <li><i class="fa fa-at fa-lg fa-fw" aria-hidden="true" data-toggle="tooltip" title="Email Address" data-placement="left"></i> nehall.neh@gmail.com</li>
+ 	      	<li> <i class="fa fa-birthday-cake fa-lg fa-fw" aria-hidden="true" data-toggle="tooltip" title="Birthdate" data-placement="left"></i> 10/14/2001</li>
+             <li>
+                <i class="fa fa-home fa-lg fa-fw" aria-hidden="true" data-toggle="tooltip" title="Street Address" data-placement="left"></i> 3665 Roads End Acres Rd<br />
+             <p style="margin-left: 30px">Imperial MO 63052</p></li>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
