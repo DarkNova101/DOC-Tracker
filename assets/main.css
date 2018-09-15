@@ -15,3 +15,10 @@
 .welcometext {
   color: white;
 }
+
+/* Logged In Index Page */
+
+.panel {
+  border: 1px solid black;
+  border-radius: 25px;
+}

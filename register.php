@@ -91,7 +91,7 @@ if(isset($_POST['register'])){
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Register</title>
+        <title>DOC | Register</title>
     </head>
     <body>
         <h1>Register</h1>
