@@ -29,7 +29,7 @@ Priority:
 
 
 HTML Selector for SIGNUP & STORING phone info
- ` <option value="">[Select a Provider]</option><option value="">--Popular Providers--</option><option value="alltel">Alltel Wireless</option>
+ ``` <option value="">[Select a Provider]</option><option value="">--Popular Providers--</option><option value="alltel">Alltel Wireless</option>
  <option value="@att.txt.net">AT&amp;T</option>
  <option value="@myboostmobile.com">Boost Mobile</option>
  <option value="@sms.mycricket.com">Cricket</option>
@@ -37,4 +37,4 @@ HTML Selector for SIGNUP & STORING phone info
  <option value="@messaging.sprintpcs.com">Sprint</option>
  <option value="@tmomail.net">T-Mobile / Voice Stream</option>
  <option value="@tmomail.net">TracFone</option>
- <option value="@vtext.com">Verizon Wireless</option>`
+ <option value="@vtext.com">Verizon Wireless</option>```
