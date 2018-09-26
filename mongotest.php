@@ -12,7 +12,7 @@
 
 
    $document = array(
-    "userid" => "1", 
+    "userid" => "ENTER USR ID VARIABLE",
       "general" => "GENERAL",
       "firstName" => "Nolan",
       "lastName" => "Hall",
