@@ -1,5 +1,6 @@
  <?php
  $document = array(
+    "userid" => $_SESSION['userid']
     "general" => "GENERAL",
     "firstName" => "Nolan",
     "lastName" => "Hall",

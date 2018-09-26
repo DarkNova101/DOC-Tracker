@@ -3,13 +3,12 @@
   $m= new MongoDB\Client("mongodb://127.0.0.1/");
 
   echo "Connection to database successfully";
-   // select a database
-   $db = $m->personal;
+$dbname = $m->personal;
+$collection = $dbname->collection;
 
-   echo "Database".$db. "selected";
-   $collection = $db->info;
-   echo "Collection selected succsessfully";
-
+$id = '5ba9a54140562343d8007bf2';
+$results = $collection->find(array('firstname' => new MongoDB\BSON\ObjectId($id)));
+print_r($results);
 
    $document = array(
     "userid" => "ENTER USR ID VARIABLE",
@@ -60,4 +59,3 @@
       "doctor" => "temp",
       "docphonenumber" => "(111)111-1111"
     );
-   $collection->insertOne($document);
