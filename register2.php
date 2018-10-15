@@ -20,13 +20,12 @@ require 'connect.php';
 
 //If the POST var "register" exists (our submit button), then we can
 //assume that the user has submitted the registration form.
-if(isset($_POST['register'])){
+if(isset($_POST['register2'])){
 
     //Retrieve the field values from our registration form.
-    $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
-    $pass = !empty($_POST['password']) ? trim($_POST['password']) : null;
-    $email = !empty($_POST['email']) ? trim($_POST['email']) : null;
-    $name = !empty($_POST['name']) ? trim($_POST['name']) : null;
+    $firstname = !empty($_POST['firstname']) ? trim($_POST['firstname']) : null;
+    $lastname = !empty($_POST['lastname']) ? trim($_POST['lastname']) : null;
+
 
     //TO ADD: Error checking (username characters, password length, etc).
     //Basically, you will need to add your own error checking BEFORE
@@ -35,11 +34,12 @@ if(isset($_POST['register'])){
     //Now, we need to check if the supplied username already exists.
 
     //Construct the SQL statement and prepare it.
-    $sql = "SELECT COUNT(username) AS num FROM users WHERE username = :username, email = :email";
+    $sql = "SELECT COUNT(username) AS num FROM users WHERE userid = :userid";
     $stmt = $pdo->prepare($sql);
 
     //Bind the provided username to our prepared statement.
-    $stmt->bindValue(':username', $username);
+    $stmt->bindValue(':userid', $_SESSSION['user_id']);
+
     //Execute.
     $stmt->execute();
 
@@ -75,7 +75,6 @@ if(isset($_POST['register'])){
     if($result){
         //What you do here is up to you!
         echo 'Thank you for registering with our website.';
-        header('Location: index.php');
         //$jsontest = json_encode($_POST);
         //$file = 'Test.json';
         //file_put_contents($file, $jsontest, FILE_APPEND);

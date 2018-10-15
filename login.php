@@ -5,10 +5,12 @@
         <!--CSS Sheets-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/main.css">
+        <!--Meta Tags-->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
     <body>
+      <!-- Begin Nav Bar-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
            <div class="container">
              <a class="navbar-brand" href="#">Defenders Of Christ</a>
@@ -18,7 +20,7 @@
              <div class="collapse navbar-collapse" id="navbarResponsive">
                <ul class="navbar-nav ml-auto">
                  <li class="nav-item active">
-                   <a class="nav-link" href="home.php">Home
+                   <a class="nav-link" href="index.php">Home
                      <span class="sr-only">(current)</span>
                    </a>
                  </li>
@@ -38,6 +40,11 @@
              </div>
            </div>
          </nav>
+         <!-- End Nav Bar -->
+         <div class="alert alert-info" role="alert">
+           <center>Hey! Please login before accessing the rest of the site!</center>
+         </div>
+         <!-- Begin Login Page -->
          <table align="center">
            <thead>
              <tr><th><h2>Login</h2></th></tr>
@@ -59,6 +66,8 @@
             </td>
           </tr>
       </tbody>
+    </table>
+    <!-- End Login Page -->
     </body>
 </html>
 
